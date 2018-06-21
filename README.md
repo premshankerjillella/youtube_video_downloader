@@ -5,7 +5,7 @@ Step 1:
      Copy and paste the link of the video after running the program.
  
 Step 2:
-     Select the video quality.
+     Press the click here Button.
     
 Step 3:
      Video will be downloaded on to desktop.
