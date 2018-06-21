@@ -26,7 +26,7 @@ def downloader():
 	link=str(entry1.get())
 	yt = pytube.YouTube(link)
 	videos = yt.get_videos()
-	vid=videos[0]
+	vid=videos[1]
 
 	destination="C:\\Users\\PC\\Desktop"
 	vid.download(destination)
