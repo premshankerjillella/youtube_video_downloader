@@ -1,22 +1,58 @@
+import tkinter as tk
 import pytube
 
-print("Enter the link of the video")
-link=input()
-
-yt = pytube.YouTube(link)
-videos = yt.get_videos()
-
-s=1
-for v in videos:
-	print(str(s)+" ."+str(v))
-	s+=1
-
-print("Enter the number of the video")
-n=int(input())
-vid=videos[n-1]
 
 
-destination="C:\\Users\\PC\\Desktop"
-vid.download(destination)
+window = tk.Tk()
+#title
+window.title(" My YouTube Downloader")
+#size
+window.geometry("400x400")
 
-print("File has been succesfully downloaded")
+
+#functions
+
+
+def info_disp():
+	greeting="File has been succesfully donwloaded"
+	greeting_display=tk.Text(master=window,height=10,width=20)
+	greeting_display.grid(column=0,row=4,padx=10, pady=10)
+	greeting_display.insert(tk.END,greeting)
+
+
+
+def downloader():
+	hi=info_disp()
+	link=str(entry1.get())
+	yt = pytube.YouTube(link)
+	videos = yt.get_videos()
+	vid=videos[0]
+
+	destination="C:\\Users\\PC\\Desktop"
+	vid.download(destination)
+
+
+
+
+
+#label
+
+title=tk.Label(text="Hello welcome to my YouTube Downloader",font=20)
+title.grid(column=0,row=0,padx=10, pady=10)
+
+#label2
+
+label2=tk.Label(text="Please Enter the link of the video")
+label2.grid(column=0,row=1,padx=10, pady=10)
+
+#entry
+
+entry1=tk.Entry()
+entry1.grid(column=0,row=2)
+
+#button 1
+button1=tk.Button(text="Click Here",font=15,bg="red",command=downloader)
+button1.grid(column=0,row=3,padx=10, pady=10)
+
+
+window.mainloop()
