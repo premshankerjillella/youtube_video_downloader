@@ -5,7 +5,7 @@ import pytube
 
 window = tk.Tk()
 #title
-window.title(" My YouTube Downloader")
+window.title(" Our YouTube Downloader")
 #size
 window.geometry("400x400")
 
