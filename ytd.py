@@ -14,7 +14,7 @@ window.geometry("400x400")
 
 
 def info_disp():
-	greeting="File has been succesfully donwloaded"
+	greeting="File has been succesfully donwloaded!"
 	greeting_display=tk.Text(master=window,height=10,width=20)
 	greeting_display.grid(column=0,row=4,padx=10, pady=10)
 	greeting_display.insert(tk.END,greeting)
@@ -37,7 +37,7 @@ def downloader():
 
 #label
 
-title=tk.Label(text="Hello welcome to my YouTube Downloader",font=20)
+title=tk.Label(text="Hello! welcome to my YouTube Downloader.",font=30)
 title.grid(column=0,row=0,padx=10, pady=10)
 
 #label2
